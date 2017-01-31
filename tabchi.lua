@@ -478,8 +478,7 @@ function is_sudo(msg)
 	function process_links(text_)
 	if text_:match("https://telegram.me/joinchat/%S+") or text_:match("https://t.me/joinchat/%S+") then
 	local matches = {
-	text_:match("(https://telegram.me/joinchat/%S+)")
-	text_:match("(https://t.me/joinchat/%S+)")
+	text_:match("(https://telegram.me/joinchat/%S+)") or text_:match("(https://t.me/joinchat/%S+)")
 	}
 	tdcli_function({
 	ID = "CheckChatInviteLink",
